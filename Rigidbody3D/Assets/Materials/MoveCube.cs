@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveCube : MonoBehaviour
 {
     public Rigidbody rb;
-    public float moveSpeed = 100f;
+    public float moveSpeed = 5f;
 
     Vector3 moveDirection = Vector3.zero;
 
