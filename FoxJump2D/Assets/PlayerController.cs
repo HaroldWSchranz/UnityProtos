@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 10f;
-    public Rigidbody2D rb;
+    [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float jumpSpeed = 10f;
+    [SerializeField] Rigidbody2D rb;
 
     private float moveX;
+    private float moveY;
 
     // Awake is called when loading
     void Awake()
@@ -19,12 +21,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         moveX = Input.GetAxis("Horizontal")*moveSpeed;
+        moveY = Input.GetAxis("Vertical")*jumpSpeed;
     }
 
     private void FixedUpdate()
     {
         Vector2 velocity = rb.velocity;
         velocity.x = moveX;
+        velocity.y += moveY;
         rb.velocity = velocity;
     }
 }

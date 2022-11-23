@@ -1227,11 +1227,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 6481417108646350056, guid: 60eac81d7afd6a34eb980d8a6ed5ba6a, type: 3}
   platformCount: 300
-  platformXmin: -1.25
-  platformXmax: 1.25
+  platformXmin: -1.5
+  platformXmax: 1.5
   platformYstart: -10
   platformYminSpace: 1
-  platformYmaxSpace: 1.5
+  platformYmaxSpace: 2
 --- !u!4 &839420449
 Transform:
   m_ObjectHideFlags: 0
@@ -1865,6 +1865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 4
+  jumpSpeed: 10
   rb: {fileID: 0}
 --- !u!1001 &1241054060
 PrefabInstance:
@@ -2038,7 +2039,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.1
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: d903d1662f9017d4e86ef068d3c4ea2e, type: 2}
@@ -2149,8 +2150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 742ca39abcb1d704e94c346448a9fa25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  rb: {fileID: 0}
+  moveSpeed: 2
+  jumpSpeed: 1
+  rb: {fileID: 1354847485}
 --- !u!1001 &1522542362
 PrefabInstance:
   m_ObjectHideFlags: 0
